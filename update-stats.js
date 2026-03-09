@@ -14,8 +14,8 @@ const START_DATE = '2026-03-01';
 const END_DATE = '2026-04-30';
 
 // MLB Stats API - WBC uses sportId=51 (International Baseball)
-// gameType=F (pool play), D (quarterfinals), L (semifinals), W (championship), E (exhibition)
-const SCHEDULE_URL = `https://statsapi.mlb.com/api/v1/schedule?sportId=51&season=${SEASON}&startDate=${START_DATE}&endDate=${END_DATE}`;
+// F=pool play, D=quarterfinals, L=semifinals, W=championship  (excludes E=exhibition)
+const SCHEDULE_URL = `https://statsapi.mlb.com/api/v1/schedule?sportId=51&season=${SEASON}&startDate=${START_DATE}&endDate=${END_DATE}&gameType=F,D,L,W`;
 
 async function fetchJson(url) {
   const res = await fetch(url);
