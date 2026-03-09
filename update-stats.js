@@ -34,9 +34,13 @@ function buildPlayerSet(picks) {
   return players;
 }
 
-// Normalize a name for comparison: lowercase, remove punctuation
+// Normalize: lowercase, convert accented chars to base ASCII, remove remaining punctuation
 function normalize(name) {
-  return name.toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+  return name.toLowerCase()
+    .normalize('NFD')                  // decompose accented chars (é → e + combining)
+    .replace(/[\u0300-\u036f]/g, '')   // strip combining diacritical marks
+    .replace(/[^a-z0-9 ]/g, '')        // remove remaining punctuation/symbols
+    .replace(/\s+/g, ' ').trim();
 }
 
 // Build alias map to handle slight name differences
@@ -45,7 +49,7 @@ function buildAliasMap(playerSet) {
   for (const name of playerSet) {
     map[normalize(name)] = name;
   }
-  // Extra aliases for tricky names
+  // Extra aliases for API name variations
   const extras = {
     'jazz chisholm': 'Jazz Chisholm Jr.',
     'jazz chisholm jr': 'Jazz Chisholm Jr.',
@@ -54,16 +58,11 @@ function buildAliasMap(playerSet) {
     'vladimir guerrero': 'Vladimir Guerrero Jr.',
     'dante bichette': 'Dante Bichette Jr',
     'travis bazzana': 'Travis Bazzana',
-    'bryce harper': 'Bryce Harper',
-    'murakami': 'Munetaka Murakami',
     'munetaka murakami': 'Munetaka Murakami',
     'junior caminero': 'Junior Caminero',
-    'caminero': 'Junior Caminero',
-    'gio urshela': 'Gio Urshela',
     'giovanny urshela': 'Gio Urshela',
     'nolan arenado': 'Nolan Arenado',
-    'nolan aranado': 'Nolan Arenado',
-    'hyunmin ahn': 'Hyun-min Ahn',
+    'hyun min ahn': 'Hyun-min Ahn',   // API uses space not hyphen
     'ivan herrera': 'Ivan Herrera',
     'jarren duran': 'Jarren Duran',
   };
@@ -76,15 +75,7 @@ function buildAliasMap(playerSet) {
 function matchPlayer(apiName, aliasMap) {
   const norm = normalize(apiName);
   if (aliasMap[norm]) return aliasMap[norm];
-  // Try last name match as fallback
-  const lastName = norm.split(' ').pop();
-  for (const [key, val] of Object.entries(aliasMap)) {
-    if (key.endsWith(lastName) || key.startsWith(lastName)) {
-      // Only use last-name match if it's unique enough (skip common names)
-      const commonLastNames = ['rodriguez', 'martinez', 'gonzalez', 'hernandez', 'ramirez', 'jones', 'johnson', 'smith'];
-      if (!commonLastNames.includes(lastName)) return val;
-    }
-  }
+  // No last-name fallback — too many false positives with common surnames
   return null;
 }
 
