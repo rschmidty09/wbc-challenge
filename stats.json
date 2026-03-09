@@ -1,0 +1,745 @@
+{
+  "lastUpdated": "2026-03-09T17:18:08.139Z",
+  "players": {
+    "Dante Bichette Jr": {
+      "walks": 15,
+      "singles": 20,
+      "doubles": 6,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 9,
+      "runs": 20,
+      "points": 80
+    },
+    "Spencer Horwitz": {
+      "walks": 0,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 1,
+      "points": 3
+    },
+    "Michael Arroyo": {
+      "walks": 5,
+      "singles": 4,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 4,
+      "points": 17
+    },
+    "Gio Urshela": {
+      "walks": 5,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 1,
+      "points": 9
+    },
+    "Jordan Diaz": {
+      "walks": 1,
+      "singles": 5,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 1,
+      "points": 9
+    },
+    "Jackson Chourio": {
+      "walks": 2,
+      "singles": 0,
+      "doubles": 1,
+      "triples": 1,
+      "homeRuns": 1,
+      "rbi": 1,
+      "runs": 2,
+      "points": 14
+    },
+    "Jose Ramos": {
+      "walks": 3,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 1,
+      "points": 8
+    },
+    "Druw Jones": {
+      "walks": 2,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 2,
+      "points": 11
+    },
+    "Ozzie Albies": {
+      "walks": 0,
+      "singles": 4,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 2,
+      "rbi": 6,
+      "runs": 4,
+      "points": 22
+    },
+    "Xander Bogaerts": {
+      "walks": 1,
+      "singles": 4,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 3,
+      "points": 11
+    },
+    "Edmundo Sosa": {
+      "walks": 1,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 2,
+      "points": 7
+    },
+    "Didi Gregorius": {
+      "walks": 0,
+      "singles": 4,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 4,
+      "points": 17
+    },
+    "Johan Camargo": {
+      "walks": 0,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 0,
+      "points": 7
+    },
+    "Jose Caballero": {
+      "walks": 4,
+      "singles": 1,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 0,
+      "points": 8
+    },
+    "Josh Naylor": {
+      "walks": 2,
+      "singles": 4,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 2,
+      "points": 9
+    },
+    "Bo Naylor": {
+      "walks": 1,
+      "singles": 3,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 4,
+      "points": 9
+    },
+    "Owen Caissie": {
+      "walks": 0,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 4,
+      "runs": 2,
+      "points": 15
+    },
+    "Zach Levenson": {
+      "walks": 2,
+      "singles": 4,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 1,
+      "points": 14
+    },
+    "Ismael Munguia": {
+      "walks": 2,
+      "singles": 8,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 1,
+      "points": 14
+    },
+    "Mark Vientos": {
+      "walks": 1,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 6
+    },
+    "Chase Dawson": {
+      "walks": 0,
+      "singles": 1,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 3,
+      "points": 6
+    },
+    "Freddy Zamora": {
+      "walks": 1,
+      "singles": 0,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 2,
+      "points": 12
+    },
+    "Harrison Bader": {
+      "walks": 0,
+      "singles": 1,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 4,
+      "points": 14
+    },
+    "Lucas Ramirez": {
+      "walks": 2,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 3,
+      "rbi": 3,
+      "runs": 4,
+      "points": 22
+    },
+    "Leonardo Reginatto": {
+      "walks": 1,
+      "singles": 5,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 1,
+      "points": 8
+    },
+    "Yoan Moncada": {
+      "walks": 2,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 2,
+      "runs": 3,
+      "points": 13
+    },
+    "Ariel Martinez": {
+      "walks": 0,
+      "singles": 3,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 1,
+      "points": 11
+    },
+    "Yoelkis Guibert": {
+      "walks": 1,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 1,
+      "runs": 2,
+      "points": 10
+    },
+    "Jon Berti": {
+      "walks": 1,
+      "singles": 1,
+      "doubles": 2,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 2,
+      "runs": 3,
+      "points": 15
+    },
+    "Vinnie Pasquantino": {
+      "walks": 3,
+      "singles": 0,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 1,
+      "points": 7
+    },
+    "Jac Caglianone": {
+      "walks": 1,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 1,
+      "points": 7
+    },
+    "Bryce Harper": {
+      "walks": 1,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 3,
+      "runs": 3,
+      "points": 12
+    },
+    "Cal Raleigh": {
+      "walks": 4,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 3,
+      "runs": 3,
+      "points": 12
+    },
+    "Aaron Judge": {
+      "walks": 3,
+      "singles": 3,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 2,
+      "rbi": 6,
+      "runs": 4,
+      "points": 24
+    },
+    "Kyle Schwarber": {
+      "walks": 4,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 2,
+      "runs": 5,
+      "points": 20
+    },
+    "Kristian Robinson": {
+      "walks": 1,
+      "singles": 3,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 1,
+      "points": 7
+    },
+    "Trayce Thompson": {
+      "walks": 1,
+      "singles": 1,
+      "doubles": 2,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 0,
+      "points": 7
+    },
+    "Jazz Chisholm Jr.": {
+      "walks": 3,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 2,
+      "runs": 4,
+      "points": 15
+    },
+    "Randy Arozarena": {
+      "walks": 2,
+      "singles": 1,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 3,
+      "points": 9
+    },
+    "Rowdy Tellez": {
+      "walks": 3,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 2,
+      "runs": 2,
+      "points": 13
+    },
+    "Jarren Duran": {
+      "walks": 1,
+      "singles": 1,
+      "doubles": 2,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 4,
+      "points": 17
+    },
+    "Oneil Cruz": {
+      "walks": 2,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 4,
+      "runs": 2,
+      "points": 13
+    },
+    "Manny Machado": {
+      "walks": 4,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 1,
+      "runs": 4,
+      "points": 17
+    },
+    "Juan Soto": {
+      "walks": 3,
+      "singles": 3,
+      "doubles": 0,
+      "triples": 1,
+      "homeRuns": 3,
+      "rbi": 8,
+      "runs": 5,
+      "points": 34
+    },
+    "Vladimir Guerrero Jr.": {
+      "walks": 1,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 6,
+      "runs": 2,
+      "points": 17
+    },
+    "Junior Caminero": {
+      "walks": 0,
+      "singles": 6,
+      "doubles": 0,
+      "triples": 1,
+      "homeRuns": 3,
+      "rbi": 6,
+      "runs": 4,
+      "points": 31
+    },
+    "Jung Hoo Lee": {
+      "walks": 1,
+      "singles": 4,
+      "doubles": 2,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 3,
+      "runs": 4,
+      "points": 16
+    },
+    "Willi Castro": {
+      "walks": 2,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 1,
+      "points": 10
+    },
+    "Heliot Ramos": {
+      "walks": 0,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 1,
+      "points": 3
+    },
+    "Nolan Arenado": {
+      "walks": 1,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 1,
+      "points": 5
+    },
+    "William Contreras": {
+      "walks": 4,
+      "singles": 3,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 2,
+      "runs": 0,
+      "points": 11
+    },
+    "Ivan Herrera": {
+      "walks": 0,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 2
+    },
+    "Martin Muzik": {
+      "walks": 1,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 0,
+      "points": 4
+    },
+    "Edwin Arroyo": {
+      "walks": 0,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 1,
+      "points": 4
+    },
+    "Ronald Acuna Jr.": {
+      "walks": 0,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 1
+    },
+    "Matt Mervis": {
+      "walks": 0,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 0,
+      "points": 2
+    },
+    "Travis Bazzana": {
+      "walks": 1,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 2,
+      "runs": 2,
+      "points": 11
+    },
+    "Curtis Mead": {
+      "walks": 1,
+      "singles": 4,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 1,
+      "points": 13
+    },
+    "Chris Burke": {
+      "walks": 2,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 4
+    },
+    "Chieh-Hsien Chen": {
+      "walks": 1,
+      "singles": 0,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 1,
+      "points": 2
+    },
+    "Yu Chang": {
+      "walks": 1,
+      "singles": 5,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 5,
+      "runs": 3,
+      "points": 18
+    },
+    "Chen-Wei Chen": {
+      "walks": 1,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 3,
+      "runs": 1,
+      "points": 9
+    },
+    "Hyung Jun Kim": {
+      "walks": 2,
+      "singles": 3,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 4,
+      "runs": 3,
+      "points": 16
+    },
+    "Hyun-min Ahn": {
+      "walks": 3,
+      "singles": 4,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 4,
+      "points": 12
+    },
+    "Do Yeong Kim": {
+      "walks": 2,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 4,
+      "runs": 3,
+      "points": 17
+    },
+    "Martin Cervenka": {
+      "walks": 0,
+      "singles": 1,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 1,
+      "points": 4
+    },
+    "Max Prejda": {
+      "walks": 1,
+      "singles": 0,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 1,
+      "points": 2
+    },
+    "Marek Chlup": {
+      "walks": 2,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 4
+    },
+    "Munetaka Murakami": {
+      "walks": 2,
+      "singles": 2,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 1,
+      "runs": 3,
+      "points": 8
+    },
+    "Seiya Suzuki": {
+      "walks": 5,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 2,
+      "rbi": 5,
+      "runs": 4,
+      "points": 23
+    },
+    "Shohei Ohtani": {
+      "walks": 4,
+      "singles": 2,
+      "doubles": 1,
+      "triples": 0,
+      "homeRuns": 2,
+      "rbi": 6,
+      "runs": 4,
+      "points": 26
+    },
+    "Tyler O'Neil": {
+      "walks": 0,
+      "singles": 0,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 0
+    },
+    "Julio Rodriguez": {
+      "walks": 0,
+      "singles": 0,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 0
+    },
+    "Andrew Fisher": {
+      "walks": 0,
+      "singles": 0,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 0,
+      "rbi": 0,
+      "runs": 0,
+      "points": 0
+    }
+  }
+}

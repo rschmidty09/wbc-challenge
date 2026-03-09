@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WBC Challenge 2026</title>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --card: #131929;
+    --border: #1e2d4a;
+    --gold: #f5c518;
+    --silver: #a8b2c1;
+    --bronze: #cd7f32;
+    --green: #22c55e;
+    --text: #e2e8f0;
+    --muted: #64748b;
+    --blue: #93c5fd;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+  header {
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 50%, #0d1b3e 100%);
+    border-bottom: 3px solid var(--gold);
+    padding: 18px 24px;
+    display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  }
+  .header-title { flex: 1; }
+  header h1 { font-size: 1.9rem; font-weight: 800; color: var(--gold); letter-spacing: 1px; text-shadow: 0 2px 10px rgba(245,197,24,0.4); }
+  header p { color: var(--silver); font-size: 0.85rem; margin-top: 3px; }
+  .update-info { font-size: 0.78rem; color: var(--muted); text-align: right; }
+  .update-info span { display: block; }
+
+  main { padding: 20px 24px; max-width: 1400px; margin: 0 auto; }
+
+  /* Leaderboard */
+  .leaderboard { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 24px; }
+  .section-title { font-size: 0.75rem; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; margin-bottom: 14px; }
+
+  .leader-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+  .leader-card {
+    background: #0d1929; border: 1px solid var(--border); border-radius: 8px;
+    padding: 12px 10px; text-align: center; position: relative; transition: transform 0.15s;
+  }
+  .leader-card:hover { transform: translateY(-2px); }
+  .leader-card.rank-1 { border-color: var(--gold); background: #1c1400; }
+  .leader-card.rank-2 { border-color: var(--silver); background: #111820; }
+  .leader-card.rank-3 { border-color: var(--bronze); background: #160e00; }
+
+  .rank-badge { font-size: 1.1rem; display: block; margin-bottom: 2px; }
+  .leader-name { font-weight: 700; font-size: 0.9rem; }
+  .leader-pts { font-size: 1.7rem; font-weight: 800; color: var(--green); line-height: 1.1; margin: 2px 0; }
+  .leader-pts-label { font-size: 0.65rem; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+
+  /* Point key */
+  .scoring-key { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 12px 20px; margin-bottom: 24px; display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .scoring-key .section-title { margin-bottom: 0; }
+  .score-items { display: flex; gap: 12px; flex-wrap: wrap; }
+  .score-item { font-size: 0.78rem; color: var(--silver); }
+  .score-item strong { color: var(--gold); }
+
+  /* Country sections */
+  .countries { display: flex; flex-direction: column; gap: 14px; }
+  .country-section { background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
+  .country-header { background: linear-gradient(90deg, #0d1b3e, #162040); padding: 9px 16px; display: flex; align-items: center; gap: 10px; border-bottom: 1px solid var(--border); }
+  .country-flag { font-size: 1.3rem; }
+  .country-name { font-size: 0.95rem; font-weight: 700; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .country-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; }
+  .country-table thead tr { background: #090f1e; }
+  .country-table th { padding: 5px 10px; text-align: center; color: var(--muted); font-weight: 600; text-transform: uppercase; font-size: 0.65rem; letter-spacing: 0.5px; white-space: nowrap; }
+  .country-table th:first-child, .country-table th:nth-child(2) { text-align: left; }
+  .country-table tbody tr { border-top: 1px solid #0d1525; }
+  .country-table tbody tr:hover { background: #0d1929; }
+  .country-table td { padding: 7px 10px; text-align: center; white-space: nowrap; }
+  .country-table td:first-child { text-align: left; }
+  .country-table td:nth-child(2) { text-align: left; color: #94a3b8; font-style: italic; font-size: 0.8rem; }
+
+  .participant-name { font-weight: 600; }
+  .pts-cell { font-weight: 700; color: var(--green); }
+  .pts-cell.zero { color: var(--muted); }
+  .stat-val { color: #cbd5e1; }
+  .stat-val.hi { color: #fbbf24; font-weight: 600; }
+
+  .loading { text-align: center; padding: 60px; color: var(--muted); font-size: 1.1rem; }
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.3rem; }
+    .country-table { font-size: 0.72rem; }
+    .country-table th, .country-table td { padding: 5px 5px; }
+    main { padding: 12px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-title">
+    <h1>⚾ WBC Challenge 2026</h1>
+    <p>World Baseball Classic — $25 Entry · Pick one player per country</p>
+  </div>
+  <div class="update-info">
+    <span id="last-updated">Loading…</span>
+    <span style="margin-top:4px;color:#334155">Updates nightly at 10pm CST</span>
+  </div>
+</header>
+
+<main>
+  <div id="content" class="loading">Loading stats…</div>
+</main>
+
+<script>
+// ── PICKS (static — set once) ──────────────────────────────────────────────
+const PICKS = {
+  participants: ["Randy","Jody","Matt W","Josh","Mike","Bryan","Sal","Ben"],
+  scoring: { walks:1, singles:1, doubles:2, triples:3, homeRuns:4, rbi:1, runs:1 },
+  countries: [
+    { name:"USA", flag:"🇺🇸", picks:{ Randy:"Bryce Harper", Jody:"Cal Raleigh", "Matt W":"Aaron Judge", Josh:"Cal Raleigh", Mike:"Kyle Schwarber", Bryan:"Aaron Judge", Sal:"Aaron Judge", Ben:"Aaron Judge" }},
+    { name:"Australia", flag:"🇦🇺", picks:{ Randy:"Travis Bazzana", Jody:"Curtis Mead", "Matt W":"Travis Bazzana", Josh:"Chris Burke", Mike:"Curtis Mead", Bryan:"Travis Bazzana", Sal:"Travis Bazzana", Ben:"Curtis Mead" }},
+    { name:"Brazil", flag:"🇧🇷", picks:{ Randy:"Dante Bichette Jr", Jody:"Lucas Ramirez", "Matt W":"Lucas Ramirez", Josh:"Dante Bichette Jr", Mike:"Leonardo Reginatto", Bryan:"Lucas Ramirez", Sal:"Dante Bichette Jr", Ben:"Dante Bichette Jr" }},
+    { name:"Canada", flag:"🇨🇦", picks:{ Randy:"Josh Naylor", Jody:"Owen Caissie", "Matt W":"Josh Naylor", Josh:"Bo Naylor", Mike:"Tyler O'Neil", Bryan:"Josh Naylor", Sal:"Josh Naylor", Ben:"Josh Naylor" }},
+    { name:"Chinese Taipei", flag:"🇹🇼", picks:{ Randy:"Yu Chang", Jody:"Yu Chang", "Matt W":"Chieh-Hsien Chen", Josh:"Chen-Wei Chen", Mike:"Yu Chang", Bryan:"Chieh-Hsien Chen", Sal:"Yu Chang", Ben:"Yu Chang" }},
+    { name:"Colombia", flag:"🇨🇴", picks:{ Randy:"Gio Urshela", Jody:"Michael Arroyo", "Matt W":"Gio Urshela", Josh:"Michael Arroyo", Mike:"Michael Arroyo", Bryan:"Michael Arroyo", Sal:"Gio Urshela", Ben:"Jordan Diaz" }},
+    { name:"Cuba", flag:"🇨🇺", picks:{ Randy:"Yoan Moncada", Jody:"Yoan Moncada", "Matt W":"Yoan Moncada", Josh:"Ariel Martinez", Mike:"Yoelkis Guibert", Bryan:"Yoan Moncada", Sal:"Yoan Moncada", Ben:"Yoan Moncada" }},
+    { name:"Czech Republic", flag:"🇨🇿", picks:{ Randy:"Martin Muzik", Jody:"Marek Chlup", "Matt W":"Marek Chlup", Josh:"Max Prejda", Mike:"Martin Muzik", Bryan:"Martin Cervenka", Sal:"Martin Cervenka", Ben:"Martin Cervenka" }},
+    { name:"Dominican Republic", flag:"🇩🇴", picks:{ Randy:"Junior Caminero", Jody:"Julio Rodriguez", "Matt W":"Vladimir Guerrero Jr.", Josh:"Manny Machado", Mike:"Oneil Cruz", Bryan:"Juan Soto", Sal:"Juan Soto", Ben:"Juan Soto" }},
+    { name:"Great Britain", flag:"🇬🇧", picks:{ Randy:"Jazz Chisholm Jr.", Jody:"Kristian Robinson", "Matt W":"Jazz Chisholm Jr.", Josh:"Kristian Robinson", Mike:"Trayce Thompson", Bryan:"Jazz Chisholm Jr.", Sal:"Jazz Chisholm Jr.", Ben:"Jazz Chisholm Jr." }},
+    { name:"Israel", flag:"🇮🇱", picks:{ Randy:"Matt Mervis", Jody:"Spencer Horwitz", "Matt W":"Harrison Bader", Josh:"Zach Levenson", Mike:"Spencer Horwitz", Bryan:"Harrison Bader", Sal:"Harrison Bader", Ben:"Matt Mervis" }},
+    { name:"Italy", flag:"🇮🇹", picks:{ Randy:"Vinnie Pasquantino", Jody:"Jac Caglianone", "Matt W":"Vinnie Pasquantino", Josh:"Jon Berti", Mike:"Jac Caglianone", Bryan:"Vinnie Pasquantino", Sal:"Andrew Fisher", Ben:"Vinnie Pasquantino" }},
+    { name:"Japan", flag:"🇯🇵", picks:{ Randy:"Munetaka Murakami", Jody:"Shohei Ohtani", "Matt W":"Shohei Ohtani", Josh:"Seiya Suzuki", Mike:"Shohei Ohtani", Bryan:"Shohei Ohtani", Sal:"Shohei Ohtani", Ben:"Shohei Ohtani" }},
+    { name:"Korea", flag:"🇰🇷", picks:{ Randy:"Jung Hoo Lee", Jody:"Jung Hoo Lee", "Matt W":"Jung Hoo Lee", Josh:"Hyung Jun Kim", Mike:"Do Yeong Kim", Bryan:"Jung Hoo Lee", Sal:"Hyun-min Ahn", Ben:"Jung Hoo Lee" }},
+    { name:"Mexico", flag:"🇲🇽", picks:{ Randy:"Rowdy Tellez", Jody:"Rowdy Tellez", "Matt W":"Randy Arozarena", Josh:"Randy Arozarena", Mike:"Randy Arozarena", Bryan:"Jarren Duran", Sal:"Randy Arozarena", Ben:"Randy Arozarena" }},
+    { name:"Netherlands", flag:"🇳🇱", picks:{ Randy:"Ozzie Albies", Jody:"Druw Jones", "Matt W":"Xander Bogaerts", Josh:"Didi Gregorius", Mike:"Ozzie Albies", Bryan:"Xander Bogaerts", Sal:"Xander Bogaerts", Ben:"Ozzie Albies" }},
+    { name:"Nicaragua", flag:"🇳🇮", picks:{ Randy:"Mark Vientos", Jody:"Mark Vientos", "Matt W":"Mark Vientos", Josh:"Chase Dawson", Mike:"Ismael Munguia", Bryan:"Mark Vientos", Sal:"Freddy Zamora", Ben:"Mark Vientos" }},
+    { name:"Panama", flag:"🇵🇦", picks:{ Randy:"Jose Caballero", Jody:"Jose Ramos", "Matt W":"Jose Caballero", Josh:"Johan Camargo", Mike:"Edmundo Sosa", Bryan:"Jose Caballero", Sal:"Ivan Herrera", Ben:"Ivan Herrera" }},
+    { name:"Puerto Rico", flag:"🇵🇷", picks:{ Randy:"Nolan Arenado", Jody:"Nolan Arenado", "Matt W":"Heliot Ramos", Josh:"Edwin Arroyo", Mike:"Willi Castro", Bryan:"Heliot Ramos", Sal:"Heliot Ramos", Ben:"Heliot Ramos" }},
+    { name:"Venezuela", flag:"🇻🇪", picks:{ Randy:"Jackson Chourio", Jody:"Ronald Acuna Jr.", "Matt W":"Ronald Acuna Jr.", Josh:"William Contreras", Mike:"Jackson Chourio", Bryan:"Ronald Acuna Jr.", Sal:"Ronald Acuna Jr.", Ben:"Ronald Acuna Jr." }},
+  ]
+};
+
+// ── FETCH STATS ────────────────────────────────────────────────────────────
+let statsData = { lastUpdated: null, players: {} };
+
+async function loadStats() {
+  try {
+    const r = await fetch('./stats.json?t=' + Date.now());
+    statsData = await r.json();
+  } catch (e) {
+    console.warn('Could not load stats.json:', e);
+  }
+  render();
+}
+
+function getStats(name) {
+  return statsData.players?.[name] || { walks:0, singles:0, doubles:0, triples:0, homeRuns:0, rbi:0, runs:0, points:0 };
+}
+
+function calcTotals() {
+  const totals = {};
+  for (const p of PICKS.participants) totals[p] = 0;
+  for (const c of PICKS.countries)
+    for (const [p, player] of Object.entries(c.picks))
+      totals[p] = (totals[p] || 0) + (getStats(player).points || 0);
+  return totals;
+}
+
+// ── RENDER ─────────────────────────────────────────────────────────────────
+function sv(val) {
+  const v = val || 0;
+  return `<span class="stat-val${v > 0 ? ' hi' : ''}">${v}</span>`;
+}
+
+function render() {
+  const totals = calcTotals();
+  const ranked = Object.entries(totals).sort((a, b) => b[1] - a[1]);
+  const medals = ['🥇','🥈','🥉'];
+
+  // Header timestamp
+  const lu = statsData.lastUpdated;
+  document.getElementById('last-updated').textContent = lu
+    ? 'Stats as of ' + new Date(lu).toLocaleString('en-US', { timeZone:'America/Chicago', month:'short', day:'numeric', hour:'numeric', minute:'2-digit', hour12:true }) + ' CST'
+    : 'Stats not yet loaded';
+
+  let html = '';
+
+  // ── Leaderboard ──
+  html += `<div class="leaderboard">
+    <div class="section-title">🏆 Leaderboard</div>
+    <div class="leader-grid">`;
+  ranked.forEach(([name, pts], i) => {
+    const rc = i < 3 ? `rank-${i+1}` : '';
+    html += `<div class="leader-card ${rc}">
+      <span class="rank-badge">${medals[i] || '#'+(i+1)}</span>
+      <div class="leader-name">${name}</div>
+      <div class="leader-pts">${pts}</div>
+      <div class="leader-pts-label">points</div>
+    </div>`;
+  });
+  html += `</div></div>`;
+
+  // ── Scoring key ──
+  html += `<div class="scoring-key">
+    <div class="section-title">Scoring</div>
+    <div class="score-items">
+      <span class="score-item">Walk <strong>+1</strong></span>
+      <span class="score-item">Single <strong>+1</strong></span>
+      <span class="score-item">Double <strong>+2</strong></span>
+      <span class="score-item">Triple <strong>+3</strong></span>
+      <span class="score-item">Home Run <strong>+4</strong></span>
+      <span class="score-item">RBI <strong>+1</strong></span>
+      <span class="score-item">Run <strong>+1</strong></span>
+    </div>
+  </div>`;
+
+  // ── Countries ──
+  html += `<div class="countries">`;
+  for (const country of PICKS.countries) {
+    html += `<div class="country-section">
+      <div class="country-header">
+        <span class="country-flag">${country.flag}</span>
+        <span class="country-name">${country.name}</span>
+      </div>
+      <table class="country-table">
+        <thead><tr>
+          <th>Picker</th><th>Player</th>
+          <th>BB</th><th>1B</th><th>2B</th><th>3B</th><th>HR</th><th>RBI</th><th>R</th>
+          <th>PTS</th>
+        </tr></thead><tbody>`;
+
+    for (const participant of PICKS.participants) {
+      const player = country.picks[participant];
+      const s = getStats(player);
+      const pts = s.points || 0;
+      html += `<tr>
+        <td><span class="participant-name">${participant}</span></td>
+        <td>${player}</td>
+        <td>${sv(s.walks)}</td><td>${sv(s.singles)}</td><td>${sv(s.doubles)}</td>
+        <td>${sv(s.triples)}</td><td>${sv(s.homeRuns)}</td><td>${sv(s.rbi)}</td><td>${sv(s.runs)}</td>
+        <td><span class="pts-cell${pts===0?' zero':''}">${pts}</span></td>
+      </tr>`;
+    }
+    html += `</tbody></table></div>`;
+  }
+  html += `</div>`;
+
+  document.getElementById('content').innerHTML = html;
+}
+
+loadStats();
+</script>
+</body>
+</html>

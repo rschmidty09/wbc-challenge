@@ -1,0 +1,30 @@
+name: Update WBC Stats
+
+on:
+  schedule:
+    - cron: '0 4 * * *'   # 10pm CST (UTC-6) = 4am UTC
+  workflow_dispatch:        # also allows manual trigger from GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch WBC stats from MLB API
+        run: node update-stats.js
+
+      - name: Commit updated stats
+        run: |
+          git config user.email "wbc-bot@users.noreply.github.com"
+          git config user.name "WBC Stats Bot"
+          git add stats.json
+          git diff --staged --quiet || git commit -m "Stats update $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

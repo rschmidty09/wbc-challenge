@@ -1,0 +1,13 @@
+{
+  "name": "wbc-challenge",
+  "version": "1.0.0",
+  "description": "WBC Challenge 2026 scoreboard",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "update": "node update-stats.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

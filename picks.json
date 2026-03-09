@@ -1,0 +1,274 @@
+{
+  "participants": ["Randy", "Jody", "Matt W", "Josh", "Mike", "Bryan", "Sal", "Ben"],
+  "scoring": {
+    "walks": 1,
+    "singles": 1,
+    "doubles": 2,
+    "triples": 3,
+    "homeRuns": 4,
+    "rbi": 1,
+    "runs": 1
+  },
+  "countries": [
+    {
+      "name": "USA",
+      "picks": {
+        "Randy": "Bryce Harper",
+        "Jody": "Cal Raleigh",
+        "Matt W": "Aaron Judge",
+        "Josh": "Cal Raleigh",
+        "Mike": "Kyle Schwarber",
+        "Bryan": "Aaron Judge",
+        "Sal": "Aaron Judge",
+        "Ben": "Aaron Judge"
+      }
+    },
+    {
+      "name": "Australia",
+      "picks": {
+        "Randy": "Travis Bazzana",
+        "Jody": "Curtis Mead",
+        "Matt W": "Travis Bazzana",
+        "Josh": "Chris Burke",
+        "Mike": "Curtis Mead",
+        "Bryan": "Travis Bazzana",
+        "Sal": "Travis Bazzana",
+        "Ben": "Curtis Mead"
+      }
+    },
+    {
+      "name": "Brazil",
+      "picks": {
+        "Randy": "Dante Bichette Jr",
+        "Jody": "Lucas Ramirez",
+        "Matt W": "Lucas Ramirez",
+        "Josh": "Dante Bichette Jr",
+        "Mike": "Leonardo Reginatto",
+        "Bryan": "Lucas Ramirez",
+        "Sal": "Dante Bichette Jr",
+        "Ben": "Dante Bichette Jr"
+      }
+    },
+    {
+      "name": "Canada",
+      "picks": {
+        "Randy": "Josh Naylor",
+        "Jody": "Owen Caissie",
+        "Matt W": "Josh Naylor",
+        "Josh": "Bo Naylor",
+        "Mike": "Tyler O'Neil",
+        "Bryan": "Josh Naylor",
+        "Sal": "Josh Naylor",
+        "Ben": "Josh Naylor"
+      }
+    },
+    {
+      "name": "Chinese Taipei",
+      "picks": {
+        "Randy": "Yu Chang",
+        "Jody": "Yu Chang",
+        "Matt W": "Chieh-Hsien Chen",
+        "Josh": "Chen-Wei Chen",
+        "Mike": "Yu Chang",
+        "Bryan": "Chieh-Hsien Chen",
+        "Sal": "Yu Chang",
+        "Ben": "Yu Chang"
+      }
+    },
+    {
+      "name": "Colombia",
+      "picks": {
+        "Randy": "Gio Urshela",
+        "Jody": "Michael Arroyo",
+        "Matt W": "Gio Urshela",
+        "Josh": "Michael Arroyo",
+        "Mike": "Michael Arroyo",
+        "Bryan": "Michael Arroyo",
+        "Sal": "Gio Urshela",
+        "Ben": "Jordan Diaz"
+      }
+    },
+    {
+      "name": "Cuba",
+      "picks": {
+        "Randy": "Yoan Moncada",
+        "Jody": "Yoan Moncada",
+        "Matt W": "Yoan Moncada",
+        "Josh": "Ariel Martinez",
+        "Mike": "Yoelkis Guibert",
+        "Bryan": "Yoan Moncada",
+        "Sal": "Yoan Moncada",
+        "Ben": "Yoan Moncada"
+      }
+    },
+    {
+      "name": "Czech Republic",
+      "picks": {
+        "Randy": "Martin Muzik",
+        "Jody": "Marek Chlup",
+        "Matt W": "Marek Chlup",
+        "Josh": "Max Prejda",
+        "Mike": "Martin Muzik",
+        "Bryan": "Martin Cervenka",
+        "Sal": "Martin Cervenka",
+        "Ben": "Martin Cervenka"
+      }
+    },
+    {
+      "name": "Dominican Republic",
+      "picks": {
+        "Randy": "Junior Caminero",
+        "Jody": "Julio Rodriguez",
+        "Matt W": "Vladimir Guerrero Jr.",
+        "Josh": "Manny Machado",
+        "Mike": "Oneil Cruz",
+        "Bryan": "Juan Soto",
+        "Sal": "Juan Soto",
+        "Ben": "Juan Soto"
+      }
+    },
+    {
+      "name": "Great Britain",
+      "picks": {
+        "Randy": "Jazz Chisholm Jr.",
+        "Jody": "Kristian Robinson",
+        "Matt W": "Jazz Chisholm Jr.",
+        "Josh": "Kristian Robinson",
+        "Mike": "Trayce Thompson",
+        "Bryan": "Jazz Chisholm Jr.",
+        "Sal": "Jazz Chisholm Jr.",
+        "Ben": "Jazz Chisholm Jr."
+      }
+    },
+    {
+      "name": "Israel",
+      "picks": {
+        "Randy": "Matt Mervis",
+        "Jody": "Spencer Horwitz",
+        "Matt W": "Harrison Bader",
+        "Josh": "Zach Levenson",
+        "Mike": "Spencer Horwitz",
+        "Bryan": "Harrison Bader",
+        "Sal": "Harrison Bader",
+        "Ben": "Matt Mervis"
+      }
+    },
+    {
+      "name": "Italy",
+      "picks": {
+        "Randy": "Vinnie Pasquantino",
+        "Jody": "Jac Caglianone",
+        "Matt W": "Vinnie Pasquantino",
+        "Josh": "Jon Berti",
+        "Mike": "Jac Caglianone",
+        "Bryan": "Vinnie Pasquantino",
+        "Sal": "Andrew Fisher",
+        "Ben": "Vinnie Pasquantino"
+      }
+    },
+    {
+      "name": "Japan",
+      "picks": {
+        "Randy": "Munetaka Murakami",
+        "Jody": "Shohei Ohtani",
+        "Matt W": "Shohei Ohtani",
+        "Josh": "Seiya Suzuki",
+        "Mike": "Shohei Ohtani",
+        "Bryan": "Shohei Ohtani",
+        "Sal": "Shohei Ohtani",
+        "Ben": "Shohei Ohtani"
+      }
+    },
+    {
+      "name": "Korea",
+      "picks": {
+        "Randy": "Jung Hoo Lee",
+        "Jody": "Jung Hoo Lee",
+        "Matt W": "Jung Hoo Lee",
+        "Josh": "Hyung Jun Kim",
+        "Mike": "Do Yeong Kim",
+        "Bryan": "Jung Hoo Lee",
+        "Sal": "Hyun-min Ahn",
+        "Ben": "Jung Hoo Lee"
+      }
+    },
+    {
+      "name": "Mexico",
+      "picks": {
+        "Randy": "Rowdy Tellez",
+        "Jody": "Rowdy Tellez",
+        "Matt W": "Randy Arozarena",
+        "Josh": "Randy Arozarena",
+        "Mike": "Randy Arozarena",
+        "Bryan": "Jarren Duran",
+        "Sal": "Randy Arozarena",
+        "Ben": "Randy Arozarena"
+      }
+    },
+    {
+      "name": "Netherlands",
+      "picks": {
+        "Randy": "Ozzie Albies",
+        "Jody": "Druw Jones",
+        "Matt W": "Xander Bogaerts",
+        "Josh": "Didi Gregorius",
+        "Mike": "Ozzie Albies",
+        "Bryan": "Xander Bogaerts",
+        "Sal": "Xander Bogaerts",
+        "Ben": "Ozzie Albies"
+      }
+    },
+    {
+      "name": "Nicaragua",
+      "picks": {
+        "Randy": "Mark Vientos",
+        "Jody": "Mark Vientos",
+        "Matt W": "Mark Vientos",
+        "Josh": "Chase Dawson",
+        "Mike": "Ismael Munguia",
+        "Bryan": "Mark Vientos",
+        "Sal": "Freddy Zamora",
+        "Ben": "Mark Vientos"
+      }
+    },
+    {
+      "name": "Panama",
+      "picks": {
+        "Randy": "Jose Caballero",
+        "Jody": "Jose Ramos",
+        "Matt W": "Jose Caballero",
+        "Josh": "Johan Camargo",
+        "Mike": "Edmundo Sosa",
+        "Bryan": "Jose Caballero",
+        "Sal": "Ivan Herrera",
+        "Ben": "Ivan Herrera"
+      }
+    },
+    {
+      "name": "Puerto Rico",
+      "picks": {
+        "Randy": "Nolan Arenado",
+        "Jody": "Nolan Arenado",
+        "Matt W": "Heliot Ramos",
+        "Josh": "Edwin Arroyo",
+        "Mike": "Willi Castro",
+        "Bryan": "Heliot Ramos",
+        "Sal": "Heliot Ramos",
+        "Ben": "Heliot Ramos"
+      }
+    },
+    {
+      "name": "Venezuela",
+      "picks": {
+        "Randy": "Jackson Chourio",
+        "Jody": "Ronald Acuna Jr.",
+        "Matt W": "Ronald Acuna Jr.",
+        "Josh": "William Contreras",
+        "Mike": "Jackson Chourio",
+        "Bryan": "Ronald Acuna Jr.",
+        "Sal": "Ronald Acuna Jr.",
+        "Ben": "Ronald Acuna Jr."
+      }
+    }
+  ]
+}

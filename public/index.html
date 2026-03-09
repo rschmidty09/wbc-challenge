@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WBC Challenge 2026</title>
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --card: #131929;
+    --border: #1e2d4a;
+    --gold: #f5c518;
+    --silver: #a8b2c1;
+    --bronze: #cd7f32;
+    --accent: #1a73e8;
+    --green: #22c55e;
+    --text: #e2e8f0;
+    --muted: #64748b;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  header {
+    background: linear-gradient(135deg, #0d1b3e 0%, #1a3a6b 50%, #0d1b3e 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .header-title {
+    flex: 1;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 1px;
+    text-shadow: 0 2px 8px rgba(245,197,24,0.4);
+  }
+
+  header p {
+    color: var(--silver);
+    font-size: 0.85rem;
+    margin-top: 2px;
+  }
+
+  .update-info {
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  .update-info button {
+    display: block;
+    margin-top: 6px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+  }
+
+  .update-info button:hover { background: #1557b0; }
+
+  main { padding: 24px; max-width: 1400px; margin: 0 auto; }
+
+  /* Leaderboard */
+  .leaderboard {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 28px;
+  }
+
+  .leaderboard h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .leader-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  .leader-card {
+    background: #0d1929;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    position: relative;
+  }
+
+  .leader-card.rank-1 { border-color: var(--gold); background: #1a1500; }
+  .leader-card.rank-2 { border-color: var(--silver); background: #111820; }
+  .leader-card.rank-3 { border-color: var(--bronze); background: #160e00; }
+
+  .rank-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    color: var(--muted);
+  }
+  .rank-1 .rank-badge { color: var(--gold); }
+  .rank-2 .rank-badge { color: var(--silver); }
+  .rank-3 .rank-badge { color: var(--bronze); }
+
+  .leader-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+
+  .leader-pts {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--green);
+    line-height: 1.2;
+  }
+
+  .leader-pts-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+  }
+
+  /* Country sections */
+  .countries { display: flex; flex-direction: column; gap: 16px; }
+
+  .country-section {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .country-header {
+    background: linear-gradient(90deg, #0d1b3e, #162040);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .country-flag { font-size: 1.4rem; }
+
+  .country-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #93c5fd;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .country-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+  }
+
+  .country-table thead tr {
+    background: #0a1020;
+  }
+
+  .country-table th {
+    padding: 6px 10px;
+    text-align: center;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .country-table th:first-child,
+  .country-table th:nth-child(2) { text-align: left; }
+
+  .country-table tbody tr { border-top: 1px solid #0d1525; }
+  .country-table tbody tr:hover { background: #0d1929; }
+
+  .country-table td {
+    padding: 7px 10px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .country-table td:first-child { text-align: left; }
+  .country-table td:nth-child(2) { text-align: left; color: #94a3b8; }
+
+  .participant-name {
+    font-weight: 600;
+    font-size: 0.85rem;
+  }
+
+  .player-name { font-style: italic; }
+
+  .pts-cell {
+    font-weight: 700;
+    color: var(--green);
+  }
+
+  .pts-cell.zero { color: var(--muted); }
+
+  .stat-val { color: #cbd5e1; }
+  .stat-val.nonzero { color: #fbbf24; }
+
+  /* Loading / error */
+  .loading {
+    text-align: center;
+    padding: 60px;
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+
+  .error-msg {
+    text-align: center;
+    padding: 40px;
+    color: #ef4444;
+  }
+
+  /* Flag emoji map fallback */
+  .flag { display: inline-block; width: 24px; text-align: center; }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.3rem; }
+    .country-table { font-size: 0.75rem; }
+    .country-table th, .country-table td { padding: 5px 6px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-title">
+    <h1>⚾ WBC Challenge 2026</h1>
+    <p>World Baseball Classic — $25 Entry</p>
+  </div>
+  <div class="update-info">
+    <span id="last-updated">Loading...</span>
+    <button onclick="triggerUpdate()">🔄 Update Now</button>
+  </div>
+</header>
+
+<main>
+  <div id="content" class="loading">Loading stats...</div>
+</main>
+
+<script>
+const PARTICIPANTS = ["Randy", "Jody", "Matt W", "Josh", "Mike", "Bryan", "Sal", "Ben"];
+
+const COUNTRY_FLAGS = {
+  "USA": "🇺🇸", "Australia": "🇦🇺", "Brazil": "🇧🇷", "Canada": "🇨🇦",
+  "Chinese Taipei": "🇹🇼", "Colombia": "🇨🇴", "Cuba": "🇨🇺",
+  "Czech Republic": "🇨🇿", "Dominican Republic": "🇩🇴",
+  "Great Britain": "🇬🇧", "Israel": "🇮🇱", "Italy": "🇮🇹",
+  "Japan": "🇯🇵", "Korea": "🇰🇷", "Mexico": "🇲🇽",
+  "Netherlands": "🇳🇱", "Nicaragua": "🇳🇮", "Panama": "🇵🇦",
+  "Puerto Rico": "🇵🇷", "Venezuela": "🇻🇪"
+};
+
+let picksData = null;
+let statsData = null;
+
+async function loadData() {
+  try {
+    const [picks, stats] = await Promise.all([
+      fetch('/api/picks').then(r => r.json()),
+      fetch('/api/stats').then(r => r.json())
+    ]);
+    picksData = picks;
+    statsData = stats;
+    render();
+  } catch (err) {
+    document.getElementById('content').innerHTML =
+      `<div class="error-msg">Failed to load data: ${err.message}</div>`;
+  }
+}
+
+function getStats(playerName) {
+  return statsData?.players?.[playerName] || { walks: 0, singles: 0, doubles: 0, triples: 0, homeRuns: 0, rbi: 0, runs: 0, points: 0 };
+}
+
+function calcParticipantTotals() {
+  const totals = {};
+  for (const p of PARTICIPANTS) totals[p] = 0;
+  for (const country of picksData.countries) {
+    for (const [participant, player] of Object.entries(country.picks)) {
+      totals[participant] += getStats(player).points || 0;
+    }
+  }
+  return totals;
+}
+
+function statCell(val) {
+  const v = val || 0;
+  return `<span class="stat-val ${v > 0 ? 'nonzero' : ''}">${v}</span>`;
+}
+
+function render() {
+  const totals = calcParticipantTotals();
+  const ranked = Object.entries(totals).sort((a, b) => b[1] - a[1]);
+
+  // Last updated
+  const lu = statsData?.lastUpdated;
+  document.getElementById('last-updated').textContent = lu
+    ? `Updated: ${new Date(lu).toLocaleString('en-US', { timeZone: 'America/Chicago', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true })}`
+    : 'Not yet updated';
+
+  let html = '';
+
+  // Leaderboard
+  html += `<div class="leaderboard"><h2>🏆 Leaderboard</h2><div class="leader-grid">`;
+  ranked.forEach(([name, pts], i) => {
+    const rankClass = i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : '';
+    const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : '';
+    html += `
+      <div class="leader-card ${rankClass}">
+        <div class="rank-badge">${medal || '#' + (i + 1)}</div>
+        <div class="leader-name">${name}</div>
+        <div class="leader-pts">${pts}</div>
+        <div class="leader-pts-label">points</div>
+      </div>`;
+  });
+  html += `</div></div>`;
+
+  // Country sections
+  html += `<div class="countries">`;
+  for (const country of picksData.countries) {
+    const flag = COUNTRY_FLAGS[country.name] || '🌐';
+    html += `
+      <div class="country-section">
+        <div class="country-header">
+          <span class="country-flag">${flag}</span>
+          <span class="country-name">${country.name}</span>
+        </div>
+        <table class="country-table">
+          <thead>
+            <tr>
+              <th>Picker</th>
+              <th>Player</th>
+              <th>BB</th>
+              <th>1B</th>
+              <th>2B</th>
+              <th>3B</th>
+              <th>HR</th>
+              <th>RBI</th>
+              <th>R</th>
+              <th>PTS</th>
+            </tr>
+          </thead>
+          <tbody>`;
+
+    for (const participant of PARTICIPANTS) {
+      const playerName = country.picks[participant];
+      const s = getStats(playerName);
+      const pts = s.points || 0;
+      html += `
+            <tr>
+              <td><span class="participant-name">${participant}</span></td>
+              <td><span class="player-name">${playerName}</span></td>
+              <td>${statCell(s.walks)}</td>
+              <td>${statCell(s.singles)}</td>
+              <td>${statCell(s.doubles)}</td>
+              <td>${statCell(s.triples)}</td>
+              <td>${statCell(s.homeRuns)}</td>
+              <td>${statCell(s.rbi)}</td>
+              <td>${statCell(s.runs)}</td>
+              <td><span class="pts-cell ${pts === 0 ? 'zero' : ''}">${pts}</span></td>
+            </tr>`;
+    }
+
+    html += `</tbody></table></div>`;
+  }
+  html += `</div>`;
+
+  document.getElementById('content').innerHTML = html;
+}
+
+async function triggerUpdate() {
+  const btn = document.querySelector('.update-info button');
+  btn.textContent = '⏳ Updating...';
+  btn.disabled = true;
+  try {
+    await fetch('/api/update', { method: 'POST' });
+    await loadData();
+    btn.textContent = '✅ Done!';
+  } catch (err) {
+    btn.textContent = '❌ Failed';
+  }
+  setTimeout(() => { btn.textContent = '🔄 Update Now'; btn.disabled = false; }, 3000);
+}
+
+// Auto-refresh every 5 minutes
+setInterval(loadData, 5 * 60 * 1000);
+
+loadData();
+</script>
+</body>
+</html>
