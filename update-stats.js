@@ -223,6 +223,19 @@ async function main() {
   const sorted = Object.entries(participantTotals).sort((a, b) => b[1] - a[1]);
   console.log('\nLeaderboard:');
   sorted.forEach(([name, pts], i) => console.log(`  ${i + 1}. ${name}: ${pts} pts`));
+
+  // Push updated stats.json to GitHub so the public site updates
+  console.log('\nPushing to GitHub...');
+  const { execSync } = require('child_process');
+  try {
+    execSync('git add stats.json && git commit -m "Stats update" && git push', {
+      cwd: __dirname,
+      stdio: 'pipe'
+    });
+    console.log('Pushed to GitHub successfully.');
+  } catch (e) {
+    console.warn('Git push skipped (nothing to commit or push failed):', e.message.split('\n')[0]);
+  }
 }
 
 main().catch(err => {
