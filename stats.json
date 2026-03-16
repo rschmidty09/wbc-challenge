@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-16T00:14:23.463Z",
+  "lastUpdated": "2026-03-16T15:55:15.948Z",
   "players": {
     "Travis Bazzana": {
       "walks": 1,
@@ -423,13 +423,13 @@
     },
     "Manny Machado": {
       "walks": 6,
-      "singles": 4,
+      "singles": 5,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
       "runs": 6,
-      "points": 19
+      "points": 20
     },
     "Juan Soto": {
       "walks": 5,
@@ -444,32 +444,32 @@
     "Vladimir Guerrero Jr.": {
       "walks": 2,
       "singles": 3,
-      "doubles": 2,
+      "doubles": 3,
       "triples": 0,
       "homeRuns": 2,
       "rbi": 8,
       "runs": 5,
-      "points": 30
+      "points": 32
     },
     "Julio Rodriguez": {
-      "walks": 2,
+      "walks": 3,
       "singles": 2,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 4,
       "runs": 3,
-      "points": 15
+      "points": 16
     },
     "Junior Caminero": {
       "walks": 1,
       "singles": 3,
       "doubles": 1,
       "triples": 0,
-      "homeRuns": 2,
-      "rbi": 6,
-      "runs": 4,
-      "points": 24
+      "homeRuns": 3,
+      "rbi": 7,
+      "runs": 5,
+      "points": 30
     },
     "Ismael Munguia": {
       "walks": 1,
@@ -544,12 +544,12 @@
     "Bryce Harper": {
       "walks": 1,
       "singles": 3,
-      "doubles": 0,
+      "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
       "runs": 4,
-      "points": 9
+      "points": 11
     },
     "Cal Raleigh": {
       "walks": 4,
@@ -563,23 +563,23 @@
     },
     "Aaron Judge": {
       "walks": 6,
-      "singles": 2,
+      "singles": 3,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 2,
       "rbi": 5,
       "runs": 5,
-      "points": 28
+      "points": 29
     },
     "Kyle Schwarber": {
-      "walks": 4,
-      "singles": 6,
+      "walks": 5,
+      "singles": 7,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 3,
       "runs": 6,
-      "points": 23
+      "points": 25
     },
     "Hyung Jun Kim": {
       "walks": 0,
