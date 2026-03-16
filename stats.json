@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-10T16:54:58.039Z",
+  "lastUpdated": "2026-03-16T00:14:23.463Z",
   "players": {
     "Travis Bazzana": {
       "walks": 1,
@@ -64,12 +64,12 @@
     "Hyun-min Ahn": {
       "walks": 3,
       "singles": 4,
-      "doubles": 0,
+      "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
       "runs": 4,
-      "points": 12
+      "points": 14
     },
     "Do Yeong Kim": {
       "walks": 2,
@@ -133,33 +133,33 @@
     },
     "Munetaka Murakami": {
       "walks": 2,
-      "singles": 2,
+      "singles": 3,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 5,
       "runs": 4,
-      "points": 17
+      "points": 18
     },
     "Seiya Suzuki": {
-      "walks": 5,
+      "walks": 6,
       "singles": 1,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 2,
       "rbi": 5,
       "runs": 4,
-      "points": 23
+      "points": 24
     },
     "Shohei Ohtani": {
-      "walks": 4,
+      "walks": 5,
       "singles": 2,
       "doubles": 1,
       "triples": 0,
-      "homeRuns": 2,
-      "rbi": 6,
-      "runs": 4,
-      "points": 26
+      "homeRuns": 3,
+      "rbi": 7,
+      "runs": 6,
+      "points": 34
     },
     "Johan Camargo": {
       "walks": 0,
@@ -204,22 +204,22 @@
     "Yoan Moncada": {
       "walks": 2,
       "singles": 0,
-      "doubles": 0,
+      "doubles": 1,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 2,
       "runs": 2,
-      "points": 10
+      "points": 12
     },
     "Ariel Martinez": {
       "walks": 1,
-      "singles": 2,
+      "singles": 5,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
-      "rbi": 3,
+      "rbi": 4,
       "runs": 2,
-      "points": 12
+      "points": 16
     },
     "Yoelkis Guibert": {
       "walks": 2,
@@ -227,19 +227,19 @@
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
-      "rbi": 1,
+      "rbi": 2,
       "runs": 2,
-      "points": 11
+      "points": 12
     },
     "Ronald Acuna Jr.": {
-      "walks": 4,
+      "walks": 6,
       "singles": 2,
       "doubles": 1,
       "triples": 0,
-      "homeRuns": 1,
-      "rbi": 2,
-      "runs": 6,
-      "points": 20
+      "homeRuns": 2,
+      "rbi": 3,
+      "runs": 9,
+      "points": 30
     },
     "William Contreras": {
       "walks": 1,
@@ -252,14 +252,14 @@
       "points": 2
     },
     "Druw Jones": {
-      "walks": 1,
+      "walks": 5,
       "singles": 3,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 2,
-      "runs": 1,
-      "points": 9
+      "runs": 2,
+      "points": 14
     },
     "Ozzie Albies": {
       "walks": 0,
@@ -273,13 +273,13 @@
     },
     "Xander Bogaerts": {
       "walks": 1,
-      "singles": 2,
+      "singles": 4,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
-      "rbi": 0,
+      "rbi": 1,
       "runs": 1,
-      "points": 6
+      "points": 9
     },
     "Didi Gregorius": {
       "walks": 0,
@@ -287,9 +287,9 @@
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
-      "rbi": 1,
+      "rbi": 2,
       "runs": 2,
-      "points": 7
+      "points": 8
     },
     "Kristian Robinson": {
       "walks": 1,
@@ -322,14 +322,14 @@
       "points": 11
     },
     "Randy Arozarena": {
-      "walks": 2,
+      "walks": 3,
       "singles": 1,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
       "runs": 3,
-      "points": 9
+      "points": 10
     },
     "Rowdy Tellez": {
       "walks": 2,
@@ -382,74 +382,74 @@
       "points": 5
     },
     "Heliot Ramos": {
-      "walks": 1,
+      "walks": 4,
       "singles": 0,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
-      "runs": 2,
-      "points": 6
+      "runs": 3,
+      "points": 10
     },
     "Nolan Arenado": {
       "walks": 0,
-      "singles": 0,
+      "singles": 4,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 0,
-      "rbi": 1,
-      "runs": 0,
-      "points": 1
+      "rbi": 2,
+      "runs": 1,
+      "points": 7
     },
     "Willi Castro": {
       "walks": 4,
       "singles": 2,
       "doubles": 1,
       "triples": 0,
-      "homeRuns": 0,
-      "rbi": 2,
-      "runs": 0,
-      "points": 10
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 1,
+      "points": 16
     },
     "Oneil Cruz": {
-      "walks": 2,
+      "walks": 3,
       "singles": 0,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 2,
       "rbi": 4,
       "runs": 4,
-      "points": 20
+      "points": 21
     },
     "Manny Machado": {
       "walks": 6,
-      "singles": 2,
+      "singles": 4,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 0,
-      "rbi": 0,
-      "runs": 4,
-      "points": 14
+      "rbi": 1,
+      "runs": 6,
+      "points": 19
     },
     "Juan Soto": {
-      "walks": 4,
-      "singles": 2,
+      "walks": 5,
+      "singles": 4,
       "doubles": 0,
       "triples": 0,
-      "homeRuns": 1,
-      "rbi": 2,
-      "runs": 3,
-      "points": 15
+      "homeRuns": 2,
+      "rbi": 4,
+      "runs": 5,
+      "points": 26
     },
     "Vladimir Guerrero Jr.": {
-      "walks": 0,
-      "singles": 1,
-      "doubles": 1,
+      "walks": 2,
+      "singles": 3,
+      "doubles": 2,
       "triples": 0,
-      "homeRuns": 1,
-      "rbi": 6,
-      "runs": 2,
-      "points": 15
+      "homeRuns": 2,
+      "rbi": 8,
+      "runs": 5,
+      "points": 30
     },
     "Julio Rodriguez": {
       "walks": 2,
@@ -457,19 +457,19 @@
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
-      "rbi": 3,
-      "runs": 2,
-      "points": 13
+      "rbi": 4,
+      "runs": 3,
+      "points": 15
     },
     "Junior Caminero": {
       "walks": 1,
-      "singles": 2,
-      "doubles": 0,
+      "singles": 3,
+      "doubles": 1,
       "triples": 0,
       "homeRuns": 2,
-      "rbi": 5,
-      "runs": 2,
-      "points": 18
+      "rbi": 6,
+      "runs": 4,
+      "points": 24
     },
     "Ismael Munguia": {
       "walks": 1,
@@ -548,38 +548,38 @@
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
-      "runs": 3,
-      "points": 8
+      "runs": 4,
+      "points": 9
     },
     "Cal Raleigh": {
-      "walks": 3,
+      "walks": 4,
       "singles": 0,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
-      "runs": 3,
-      "points": 7
+      "runs": 4,
+      "points": 9
     },
     "Aaron Judge": {
-      "walks": 4,
+      "walks": 6,
       "singles": 2,
-      "doubles": 0,
+      "doubles": 1,
       "triples": 0,
       "homeRuns": 2,
       "rbi": 5,
-      "runs": 4,
-      "points": 23
+      "runs": 5,
+      "points": 28
     },
     "Kyle Schwarber": {
       "walks": 4,
-      "singles": 4,
+      "singles": 6,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
-      "rbi": 2,
-      "runs": 5,
-      "points": 19
+      "rbi": 3,
+      "runs": 6,
+      "points": 23
     },
     "Hyung Jun Kim": {
       "walks": 0,
@@ -592,64 +592,64 @@
       "points": 0
     },
     "Josh Naylor": {
-      "walks": 1,
-      "singles": 3,
+      "walks": 2,
+      "singles": 4,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 0,
-      "rbi": 1,
+      "rbi": 2,
       "runs": 1,
-      "points": 6
+      "points": 9
     },
     "Bo Naylor": {
       "walks": 0,
-      "singles": 3,
-      "doubles": 0,
+      "singles": 4,
+      "doubles": 1,
       "triples": 0,
-      "homeRuns": 0,
-      "rbi": 1,
-      "runs": 3,
-      "points": 7
+      "homeRuns": 1,
+      "rbi": 4,
+      "runs": 5,
+      "points": 19
     },
     "Owen Caissie": {
-      "walks": 0,
+      "walks": 3,
+      "singles": 3,
+      "doubles": 3,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 5,
+      "runs": 4,
+      "points": 25
+    },
+    "Jon Berti": {
+      "walks": 2,
+      "singles": 2,
+      "doubles": 2,
+      "triples": 0,
+      "homeRuns": 1,
+      "rbi": 1,
+      "runs": 3,
+      "points": 16
+    },
+    "Vinnie Pasquantino": {
+      "walks": 6,
+      "singles": 1,
+      "doubles": 0,
+      "triples": 0,
+      "homeRuns": 3,
+      "rbi": 4,
+      "runs": 6,
+      "points": 29
+    },
+    "Jac Caglianone": {
+      "walks": 4,
       "singles": 2,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 1,
-      "rbi": 3,
-      "runs": 2,
-      "points": 13
-    },
-    "Jon Berti": {
-      "walks": 1,
-      "singles": 1,
-      "doubles": 2,
-      "triples": 0,
-      "homeRuns": 0,
-      "rbi": 0,
-      "runs": 2,
-      "points": 8
-    },
-    "Vinnie Pasquantino": {
-      "walks": 3,
-      "singles": 0,
-      "doubles": 0,
-      "triples": 0,
-      "homeRuns": 0,
-      "rbi": 0,
-      "runs": 1,
-      "points": 4
-    },
-    "Jac Caglianone": {
-      "walks": 0,
-      "singles": 0,
-      "doubles": 1,
-      "triples": 0,
-      "homeRuns": 0,
-      "rbi": 1,
-      "runs": 0,
-      "points": 3
+      "rbi": 4,
+      "runs": 5,
+      "points": 21
     },
     "Edwin Arroyo": {
       "walks": 0,
@@ -663,13 +663,13 @@
     },
     "Spencer Horwitz": {
       "walks": 0,
-      "singles": 2,
+      "singles": 3,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 1,
-      "runs": 2,
-      "points": 9
+      "runs": 3,
+      "points": 11
     },
     "Zach Levenson": {
       "walks": 1,
@@ -683,33 +683,33 @@
     },
     "Harrison Bader": {
       "walks": 0,
-      "singles": 1,
+      "singles": 2,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 2,
       "runs": 2,
-      "points": 9
+      "points": 10
     },
     "Matt Mervis": {
       "walks": 0,
       "singles": 1,
-      "doubles": 0,
+      "doubles": 2,
       "triples": 0,
       "homeRuns": 0,
-      "rbi": 1,
+      "rbi": 3,
       "runs": 0,
-      "points": 2
+      "points": 8
     },
     "Jackson Chourio": {
-      "walks": 0,
-      "singles": 1,
+      "walks": 2,
+      "singles": 2,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
-      "runs": 0,
-      "points": 2
+      "runs": 2,
+      "points": 7
     },
     "Tyler O'Neil": {
       "walks": 0,
