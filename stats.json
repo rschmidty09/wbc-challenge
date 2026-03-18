@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-03-16T15:55:15.948Z",
+  "lastUpdated": "2026-03-18T13:28:50.855Z",
   "players": {
     "Travis Bazzana": {
       "walks": 1,
@@ -232,24 +232,24 @@
       "points": 12
     },
     "Ronald Acuna Jr.": {
-      "walks": 6,
-      "singles": 2,
+      "walks": 7,
+      "singles": 4,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 2,
-      "rbi": 3,
-      "runs": 9,
-      "points": 30
+      "rbi": 4,
+      "runs": 10,
+      "points": 35
     },
     "William Contreras": {
-      "walks": 1,
+      "walks": 3,
       "singles": 0,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 0,
       "runs": 1,
-      "points": 2
+      "points": 4
     },
     "Druw Jones": {
       "walks": 5,
@@ -543,13 +543,13 @@
     },
     "Bryce Harper": {
       "walks": 1,
-      "singles": 3,
+      "singles": 4,
       "doubles": 1,
       "triples": 0,
-      "homeRuns": 0,
-      "rbi": 1,
-      "runs": 4,
-      "points": 11
+      "homeRuns": 1,
+      "rbi": 3,
+      "runs": 5,
+      "points": 19
     },
     "Cal Raleigh": {
       "walks": 4,
@@ -572,14 +572,14 @@
       "points": 29
     },
     "Kyle Schwarber": {
-      "walks": 5,
+      "walks": 6,
       "singles": 7,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 3,
       "runs": 6,
-      "points": 25
+      "points": 26
     },
     "Hyung Jun Kim": {
       "walks": 0,
@@ -623,33 +623,33 @@
     },
     "Jon Berti": {
       "walks": 2,
-      "singles": 2,
+      "singles": 3,
       "doubles": 2,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 1,
       "runs": 3,
-      "points": 16
+      "points": 17
     },
     "Vinnie Pasquantino": {
-      "walks": 6,
+      "walks": 7,
       "singles": 1,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 3,
       "rbi": 4,
       "runs": 6,
-      "points": 29
+      "points": 30
     },
     "Jac Caglianone": {
-      "walks": 4,
+      "walks": 5,
       "singles": 2,
       "doubles": 1,
       "triples": 0,
       "homeRuns": 1,
       "rbi": 4,
-      "runs": 5,
-      "points": 21
+      "runs": 6,
+      "points": 23
     },
     "Edwin Arroyo": {
       "walks": 0,
@@ -703,13 +703,13 @@
     },
     "Jackson Chourio": {
       "walks": 2,
-      "singles": 2,
+      "singles": 3,
       "doubles": 0,
       "triples": 0,
       "homeRuns": 0,
       "rbi": 1,
-      "runs": 2,
-      "points": 7
+      "runs": 3,
+      "points": 9
     },
     "Tyler O'Neil": {
       "walks": 0,
